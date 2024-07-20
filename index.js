@@ -61,6 +61,10 @@ app.post("/csv/download", async (req, res) => {
     return res.status(200).json({ message: error.message });
   }
 });
+app.get("/hello",(req,res)=>{
+  res.send("Hello World!")
+
+})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
